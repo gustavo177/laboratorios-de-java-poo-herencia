@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/herencia/herencia.iml" filepath="$PROJECT_DIR$/herencia/herencia.iml" />
       <module fileurl="file://$PROJECT_DIR$/poo_herencia.iml" filepath="$PROJECT_DIR$/poo_herencia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pooherencia/pooherencia.iml" filepath="$PROJECT_DIR$/pooherencia/pooherencia.iml" />
     </modules>
   </component>
 </project>
