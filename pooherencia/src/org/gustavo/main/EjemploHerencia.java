@@ -17,7 +17,7 @@ public class EjemploHerencia {
         System.out.println(alumno.getNombre() + " " + alumno.getApellido());
         System.out.println("Profesor " + profesor.getAsignatura()
                 + ": " + profesor.getNombre()
-                + " " + alumno.getApellido());
+                + " " + profesor.getApellido());
 
     }
 }
