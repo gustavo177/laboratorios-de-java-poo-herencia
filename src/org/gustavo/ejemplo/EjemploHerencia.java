@@ -6,11 +6,11 @@ import org.gustavo.pooherencia.Profesor;
 
 public class EjemploHerencia {
     public static void main(String[] args) {
-        Persona alumno = new Alumno();
+        Alumno alumno = new Alumno();
         alumno.setNombre("Andres");
         alumno.setApellido("Gusman");
 
-        ((Alumno)alumno).setInstitucion("Instituto Nacional");
+        alumno.setInstitucion("Instituto Nacional");
 
         Profesor profesor = new Profesor();
         profesor.setNombre("Luci");
@@ -19,7 +19,7 @@ public class EjemploHerencia {
 
         System.out.println(alumno.getNombre()
                 + " " + alumno.getApellido()
-                + " " + ((Alumno) alumno).getInstitucion());
+                + " " + alumno.getInstitucion());
         System.out.println("Profesor " + profesor.getAsignatura()
                 + ": " + profesor.getNombre()
                 + " " + profesor.getApellido());
