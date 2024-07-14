@@ -1,8 +1,6 @@
 package org.gustavo.ejemplo;
 
-import org.gustavo.pooherencia.Alumno;
-import org.gustavo.pooherencia.Persona;
-import org.gustavo.pooherencia.Profesor;
+import org.gustavo.pooherencia.*;
 
 public class EjemploHerencia {
     public static void main(String[] args) {
