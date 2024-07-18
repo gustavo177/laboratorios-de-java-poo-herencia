@@ -6,54 +6,59 @@ public class EjemploHerencia {
     public static void main(String[] args) {
 
         System.out.println("======== Creando la instancia de la clase Alumno ==========");
-        Alumno alumno = new Alumno();
-        alumno.setNombre("Andres");
-        alumno.setApellido("Gusman");
-        alumno.setInstitucion("Instituto Nacional");
+        Alumno alumno = new Alumno("Andres", "Gusman", 13, "Instituto Nacional");
         alumno.setNotaCastellano(5.5);
         alumno.setNotaHistoria(6.3);
         alumno.setNotaMatematica(4.9);
+        alumno.setEmail("tavo@gmail.com");
 
         System.out.println("======== Creando la instancia de la clase Alumno Internacional ==========");
 
-        AlumnoInternacional alumnoInt=new AlumnoInternacional();
-        alumnoInt.setNombre("Peter");
-        alumnoInt.setApellido("Gosling");
-        alumnoInt.setPais("Australia");
+        AlumnoInternacional alumnoInt = new AlumnoInternacional("Peter", "Gosling", "Australia");
         alumnoInt.setEdad(15);
         alumnoInt.setInstitucion("Instituto Nacional");
         alumnoInt.setNotaIdiomas(6.8);
         alumnoInt.setNotaCastellano(6.2);
         alumnoInt.setNotaHistoria(5.8);
         alumnoInt.setNotaMatematica(4.5);
+        alumnoInt.setEmail("peter@correo.com");
 
         System.out.println("======== Creando la instancia de la clase Profesor ==========");
-        Profesor profesor = new Profesor();
-        profesor.setNombre("Luci");
-        profesor.setApellido("Pérez");
-        profesor.setAsignatura("Matemáticas");
+        Profesor profesor = new Profesor("Luci ", "Pérez ", "Matemáticas ");
+        profesor.setEdad(28);
+        profesor.setEmail("Profesor.gustavo@colegio.com");
+
         System.out.println("======== -- ==========");
 
-        System.out.println(alumno.getNombre()
-                + " " + alumno.getApellido()
-                + " " + alumno.getInstitucion());
+        imprimir(alumno);
+        imprimir(alumnoInt);
+        imprimir(profesor);
+    }
 
-        System.out.println(alumnoInt.getNombre()
-                + " " + alumnoInt.getApellido()
-                + " " + alumnoInt.getInstitucion()
-                + " " + alumnoInt.getPais());
+    public static void imprimir(Persona persona) {
+        System.out.println("Imprimiendo datos en común del tipo Persona");
+        System.out.println("Nombre: "+persona.getNombre()
+                + "Apellido: " + persona.getApellido()
+                + "Edad: " + persona.getEdad()
+                + "Email: " + persona.getEmail());
 
-        System.out.println("Profesor " + profesor.getAsignatura()
-                + ": " + profesor.getNombre()
-                + " " + profesor.getApellido());
-
-        Class clase = alumnoInt.getClass();
-        while (clase.getSuperclass() != null){
-            String hija = clase.getName();
-            String padre = clase.getSuperclass().getName();
-            System.out.println(hija + " es una clase hija de la clase padre " + padre);
-            clase = clase.getSuperclass();
+        if(persona instanceof Alumno){
+            System.out.println("Imprimiendo los datos del tipo Alumno:");
+            System.out.println("Institución: " + ((Alumno)persona).getInstitucion());
+            System.out.println("Nota Matematicas: " + ((Alumno)persona).getNotaMatematica());
+            System.out.println("Nota Historia: "  + ((Alumno) persona).getNotaHistoria());
+            System.out.println("Nota Castellano: " + ((Alumno) persona).getNotaCastellano());
+            if (persona instanceof AlumnoInternacional){
+                System.out.println("Imprimiendo los datos del tipo AlumnoInternacional:");
+                System.out.println("Nota idioma: " + ((AlumnoInternacional) persona).getNotaIdiomas());
+                System.out.println("Pais: " + ((AlumnoInternacional) persona).getPais());
+            }
         }
+        if(persona instanceof  Profesor){
+            System.out.println("Imprimiendo los datos del tipo Profesor: ");
+            System.out.println("Asignatura: " + ((Profesor)persona).getAsignatura());
+        }
+        System.out.println("======== -- ==========");
 
     }
 }
