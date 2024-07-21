@@ -8,6 +8,7 @@ import org.gustavo.pooherencia.Profesor;
 public class EjemploHerenciaToString {
     public static void main(String[] args) {
 
+
         System.out.println("======== Creando la instancia de la clase Alumno ==========");
         Alumno alumno = new Alumno("Andres", "Gusman", 13, "Instituto Nacional");
         alumno.setNotaCastellano(5.5);
