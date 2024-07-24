@@ -14,9 +14,7 @@ public class EjemploHerenciaToString {
         alumno.setNotaHistoria(6.3);
         alumno.setNotaMatematica(4.9);
         alumno.setEmail("tavo@gmail.com");
-
         System.out.println("======== Creando la instancia de la clase Alumno Internacional ==========");
-
         AlumnoInternacional alumnoInt = new AlumnoInternacional("Peter", "Gosling", "Australia");
         alumnoInt.setEdad(15);
         alumnoInt.setInstitucion("Instituto Nacional");
