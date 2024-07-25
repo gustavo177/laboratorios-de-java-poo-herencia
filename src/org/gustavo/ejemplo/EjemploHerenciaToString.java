@@ -31,7 +31,6 @@ public class EjemploHerenciaToString {
         imprimir(alumnoInt);
         imprimir(profesor);
     }
-
     public static void imprimir(Persona persona) {
         System.out.println("======== -- ==========");
         System.out.println(persona);
