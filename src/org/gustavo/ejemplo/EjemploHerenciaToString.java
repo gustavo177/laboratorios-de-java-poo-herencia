@@ -7,7 +7,6 @@ import org.gustavo.pooherencia.Profesor;
 
 public class EjemploHerenciaToString {
     public static void main(String[] args) {
-
         System.out.println("======== Creando la instancia de la clase Alumno ==========");
         Alumno alumno = new Alumno("Andres", "Gusman", 13, "Instituto Nacional");
         alumno.setNotaCastellano(5.5);
@@ -23,14 +22,11 @@ public class EjemploHerenciaToString {
         alumnoInt.setNotaHistoria(5.8);
         alumnoInt.setNotaMatematica(4.5);
         alumnoInt.setEmail("peter@correo.com");
-
         System.out.println("======== Creando la instancia de la clase Profesor ==========");
         Profesor profesor = new Profesor("Luci ", "Pérez ", "Matemáticas ");
         profesor.setEdad(28);
         profesor.setEmail("Profesor.gustavo@colegio.com");
-
         System.out.println("======== -- ==========");
-
         imprimir(alumno);
         imprimir(alumnoInt);
         imprimir(profesor);
@@ -38,8 +34,6 @@ public class EjemploHerenciaToString {
 
     public static void imprimir(Persona persona) {
         System.out.println("======== -- ==========");
-
         System.out.println(persona);
-
     }
 }
