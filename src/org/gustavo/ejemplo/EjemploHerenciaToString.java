@@ -27,6 +27,7 @@ public class EjemploHerenciaToString {
         profesor.setEdad(28);
         profesor.setEmail("Profesor.gustavo@colegio.com");
         System.out.println("======== -- ==========");
+
         imprimir(alumno);
         imprimir(alumnoInt);
         imprimir(profesor);
