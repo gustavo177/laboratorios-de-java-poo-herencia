@@ -84,4 +84,6 @@ public class Alumno extends Persona {
                 ", notaHistoria=" + notaHistoria +
                 ", promedio=" + this.calculaPromedio();
     }
+
+
 }
