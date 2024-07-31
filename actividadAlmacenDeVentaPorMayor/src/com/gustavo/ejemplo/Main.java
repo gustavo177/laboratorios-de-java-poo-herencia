@@ -8,6 +8,8 @@ package com.gustavo.ejemplo;
 Ademas escriba con código java la jerarquía de clases que están presentes.
 * */
 
+import com.gustavo.pooherencia.Almacen;
+
 /* Respuesta
 * Jerarquía 1
 * public class Producto {}
@@ -30,7 +32,8 @@ Ademas escriba con código java la jerarquía de clases que están presentes.
 * */
 public class Main {
     public static void main(String[] args) {
-
+        Almacen almacen = new Almacen(1,"Tienda Tavo");
+        System.out.println(almacen.toString());
 
 
     }
